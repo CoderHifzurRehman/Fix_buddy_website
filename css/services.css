@@ -1,0 +1,196 @@
+
+/* Row Styling */
+.row {
+    margin-left: 0; 
+    margin-right: 0; 
+}
+
+/* Card Styling */
+.service-card {
+    margin-bottom: 10px; /* Space between cards */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    object-fit: cover;
+}
+
+/* Card Hover Effect */
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Video Styling */
+video {
+    width: 100%; /* Full width */
+    height: 425px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 15px; /* Reduce space for smaller screens */
+    }
+
+    video {
+        width: 100%; /* Full width */
+        height: 350px;
+        margin-top: 20px; /* Space above video */
+    }
+}
+
+/* General Styling for Service Cards */
+.service-card-1 {
+    position: relative;
+    border-radius: 25px;
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.service-card-1 img {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform 0.3s ease;
+    height: 180px; /* Adjust image height */
+    object-fit: cover;
+}
+
+.service-card-1:hover,
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid #afaeae;
+    transition: transform 0.4s ease;
+    cursor: context-menu;
+}
+
+.service-card-1:hover img {
+    transform: scale(1.1);
+}
+
+/* Product Card Styling */
+.product-card {
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+/* Product Card Hover Effect */
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Text Styling */
+.card-title {
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Button Styling */
+.btn-add-to-cart {
+    background-color: #90c5e8;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/* Hover Effects */
+.btn-add-to-cart:hover {
+    background-color: #62b4ef;
+}
+
+
+
+.service-card-1:hover .card-title {
+    color: #3498db; /* Change title color on hover */
+}
+
+/* General Layout Enhancements */
+.row-cols-md-2 .col {
+    padding: 0;
+}
+
+/* Add responsive media queries for small devices */
+@media (max-width: 768px) {
+    .service-card-1 {
+        margin-bottom: 10px;
+        margin-top: 20px;
+        width: 100%;
+        
+    }
+}
+/* end */
+
+
+/* The Modal when service already in cart (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+}
+/* end modal */
+
+/* cart modal */
+#cart-items-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+#cart-items-list li {
+    padding: 10px; /* Add padding for better spacing */
+    border-bottom: 1px solid #ccc; /* Optional: Add a border between items */
+}
+/* end cart modal */
+
+/* view button glow when any service added */
+.glow {
+    animation: glow-animation 1.5s infinite alternate;
+  }
+  
+  @keyframes glow-animation {
+    from {
+      box-shadow: 0 0 2px rgba(127, 228, 127, 0.5); /* Adjust color as needed */
+    }
+    to {
+      box-shadow: 0 0 10px rgb(23, 224, 27); /* Adjust color as needed */
+    }
+}
+/* end */
+  
+
+  .btn-added {
+    background-color: #28a745; /* Green */
+    color: white;
+    pointer-events: none; /* Prevent clicking */
+  }
+
+  .modal-dialog-scrollable .modal-body {
+    max-height: 400px; /* Set a maximum height for the scrollable area */
+    overflow-y: auto;  /* Allow vertical scrolling */
+  }
+  .video-responsive {
+    width: 100%;  /* Set the width to 100% of the parent container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the video doesn't exceed its container width */
+    display: block; /* Prevent inline elements from causing extra space */
+  }
+    
